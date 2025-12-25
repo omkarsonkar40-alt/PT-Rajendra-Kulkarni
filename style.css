@@ -67,6 +67,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 
 nav ul li {
@@ -86,41 +87,35 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Language Dropdown Menu
+   Language Combo Box
    ========================= */
-.lang-menu {
-  position: relative;
-}
-
-.lang-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: #ffffff;
-  list-style: none;
-  padding: 8px 0;
-  min-width: 140px;
-  border-radius: 4px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  display: none;
-  z-index: 2000;
-}
-
-.lang-dropdown li a {
-  display: block;
-  padding: 8px 16px;
+.lang-select select {
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
   color: var(--text-dark);
+  cursor: pointer;
+}
+
+.lang-select select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Accessibility helper */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-}
-
-.lang-dropdown li a:hover {
-  background-color: var(--bg-soft);
-  color: var(--accent);
-}
-
-.lang-menu:hover .lang-dropdown {
-  display: block;
+  border: 0;
 }
 
 /* =========================
