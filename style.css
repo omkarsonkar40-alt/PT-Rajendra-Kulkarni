@@ -29,6 +29,14 @@ body {
 }
 
 /* =========================
+   Language Handling
+   ========================= */
+/* English visible by default */
+[data-lang="mr"] {
+  display: none;
+}
+
+/* =========================
    Header & Navigation
    ========================= */
 header {
@@ -59,6 +67,10 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 24px;
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav ul li a {
