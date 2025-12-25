@@ -8,180 +8,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg-main: #f7f4ef;
-      --bg-soft: #efe9df;
-      --accent: #8b6b3e;
-      --text-dark: #1f1f1f;
-      --text-light: #555;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-dark);
-      line-height: 1.7;
-    }
-
-    header {
-      background: rgba(247, 244, 239, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #ddd;
-    }
-
-    nav {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 20px;
-    }
-
-    nav .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 24px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: var(--text-dark);
-      font-size: 14px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: var(--accent);
-    }
-
-    .hero {
-      background: linear-gradient(to right, #f7f4ef, #efe9df);
-      padding: 90px 20px;
-    }
-
-    .hero-content {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 46px;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--accent);
-      margin-bottom: 30px;
-    }
-
-    .hero p {
-      font-size: 17px;
-      color: var(--text-light);
-      max-width: 750px;
-      margin: auto;
-    }
-
-    .highlight {
-      background-color: var(--bg-soft);
-      padding: 70px 20px;
-    }
-
-    .highlight-box {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-    }
-
-    .highlight-item {
-      background: #fff;
-      padding: 30px;
-      border-left: 4px solid var(--accent);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-    }
-
-    .highlight-item h3 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    .highlight-item p {
-      font-size: 15px;
-      color: var(--text-light);
-    }
-
-    .quote {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .quote blockquote {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      font-style: italic;
-      max-width: 800px;
-      margin: auto;
-      color: #333;
-    }
-
-    .quote span {
-      display: block;
-      margin-top: 15px;
-      font-size: 14px;
-      color: var(--accent);
-    }
-
-    footer {
-      background: #1f1f1f;
-      color: #ccc;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    footer p {
-      margin-bottom: 8px;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 34px;
-      }
-    }
-  </style>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -198,27 +26,60 @@
       <li><a href="awards.html">Awards</a></li>
       <li><a href="discography.html">Discography</a></li>
       <li><a href="contact.html">Contact</a></li>
+
+      <!-- Language Dropdown -->
+      <li>
+        <a href="#">Language</a>
+        <ul>
+          <li><a href="#" data-set-lang="en">English</a></li>
+          <li><a href="#" data-set-lang="mr">मराठी</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </header>
 
+<!-- =========================
+     HERO SECTION
+     ========================= -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Pt. Rajendra Kulkarni</h1>
-    <h2>Flute Maestro · Hindustani Classical Music</h2>
-    <p>
-      An outstanding Bansuri maestro renowned for a self-developed and distinctive
-      approach to Hindustani classical instrumental music. His artistry reflects
-      decades of dedicated practice, deep contemplation, and an unwavering commitment
-      to the flute as a complete and expressive musical medium. He is also a good singer.
-    </p>
+
+    <!-- English -->
+    <div data-lang="en">
+      <h1>Pt. Rajendra Kulkarni</h1>
+      <h2>Flute Maestro · Hindustani Classical Music</h2>
+      <p>
+        An outstanding Bansuri maestro renowned for a self-developed and distinctive
+        approach to Hindustani classical instrumental music. His artistry reflects
+        decades of dedicated practice, deep contemplation, and an unwavering commitment
+        to the flute as a complete and expressive musical medium.
+      </p>
+    </div>
+
+    <!-- Marathi -->
+    <div data-lang="mr">
+      <h1>पं. राजेंद्र कुलकर्णी</h1>
+      <h2>बांसुरी वादक · हिंदुस्थानी शास्त्रीय संगीत</h2>
+      <p>
+        स्वतः विकसित केलेल्या आणि वैशिष्ट्यपूर्ण शैलीसाठी प्रसिद्ध असलेले
+        उत्कृष्ट बांसुरी वादक. दीर्घकालीन साधना, चिंतन आणि बांसुरीला
+        संपूर्ण अभिव्यक्त माध्यम मानणारी त्यांची संगीतसाधना
+        त्यांच्या कलात्मकतेचे प्रतिबिंब आहे.
+      </p>
+    </div>
+
   </div>
 </section>
 
+<!-- =========================
+     HIGHLIGHT SECTION
+     ========================= -->
 <section class="highlight">
   <div class="highlight-box">
 
-    <div class="highlight-item">
+    <!-- English -->
+    <div data-lang="en" class="highlight-item">
       <h3>Flute as the Core Expression</h3>
       <p>
         The Bansuri stands at the very heart of his musical journey. His playing
@@ -227,7 +88,7 @@
       </p>
     </div>
 
-    <div class="highlight-item">
+    <div data-lang="en" class="highlight-item">
       <h3>A Distinct Musical Path</h3>
       <p>
         Through independent thinking and long-term artistic exploration, he has
@@ -236,7 +97,7 @@
       </p>
     </div>
 
-    <div class="highlight-item">
+    <div data-lang="en" class="highlight-item">
       <h3>Performer, Guru & Guide</h3>
       <p>
         Revered as a flautist and respected as a teacher, he is known among disciples
@@ -245,20 +106,61 @@
       </p>
     </div>
 
+    <!-- Marathi -->
+    <div data-lang="mr" class="highlight-item">
+      <h3>बांसुरी – अभिव्यक्तीचे केंद्र</h3>
+      <p>
+        बांसुरी ही त्यांच्या संगीत प्रवासाची मध्यवर्ती प्रेरणा आहे.
+        शुद्ध स्वर, स्पष्ट रागदारी आणि ध्यानात्मक भाव
+        दीर्घकाळच्या साधनेतून त्यांच्या वादनात उतरलेले दिसतात.
+      </p>
+    </div>
+
+    <div data-lang="mr" class="highlight-item">
+      <h3>एक स्वतंत्र संगीतमार्ग</h3>
+      <p>
+        परंपरेशी निष्ठा राखत स्वतंत्र चिंतनातून विकसित झालेली
+        त्यांची शैली वैयक्तिक संगीतस्वरूप अधोरेखित करते.
+      </p>
+    </div>
+
+    <div data-lang="mr" class="highlight-item">
+      <h3>कलावंत, गुरु आणि मार्गदर्शक</h3>
+      <p>
+        उत्कृष्ट बांसुरीवादक असण्याबरोबरच,
+        शिष्यांसाठी ते नम्र, मार्गदर्शक आणि प्रेरणादायी गुरु म्हणून ओळखले जातात.
+      </p>
+    </div>
+
   </div>
 </section>
 
+<!-- =========================
+     QUOTE SECTION
+     ========================= -->
 <section class="quote">
-  <blockquote>
+
+  <!-- English -->
+  <blockquote data-lang="en">
     “The flute is complete in itself — it speaks, sings, and meditates.”
     <span>— Pt. Rajendra Kulkarni</span>
   </blockquote>
+
+  <!-- Marathi -->
+  <blockquote data-lang="mr">
+    “बांसुरी ही स्वतःमध्येच संपूर्ण आहे — ती बोलते, गाते आणि ध्यान करते.”
+    <span>— पं. राजेंद्र कुलकर्णी</span>
+  </blockquote>
+
 </section>
 
 <footer>
   <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
   <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
 </footer>
+
+<!-- Language Logic -->
+<script src="js/language.js"></script>
 
 </body>
 </html>

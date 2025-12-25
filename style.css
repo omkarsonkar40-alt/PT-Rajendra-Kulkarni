@@ -1,0 +1,199 @@
+/* =========================
+   Root Variables
+   ========================= */
+:root {
+  --bg-main: #f7f4ef;
+  --bg-soft: #efe9df;
+  --accent: #8b6b3e;
+  --text-dark: #1f1f1f;
+  --text-light: #555;
+}
+
+/* =========================
+   Global Reset
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Base Styles
+   ========================= */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* =========================
+   Header & Navigation
+   ========================= */
+header {
+  background: rgba(247, 244, 239, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+  background: linear-gradient(to right, #f7f4ef, #efe9df);
+  padding: 90px 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 30px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: var(--text-light);
+  max-width: 750px;
+  margin: auto;
+}
+
+/* =========================
+   Highlight Section
+   ========================= */
+.highlight {
+  background-color: var(--bg-soft);
+  padding: 70px 20px;
+}
+
+.highlight-box {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.highlight-item {
+  background: #fff;
+  padding: 30px;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.highlight-item h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.highlight-item p {
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+/* =========================
+   Quote Section
+   ========================= */
+.quote {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.quote blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-style: italic;
+  max-width: 800px;
+  margin: auto;
+  color: #333;
+}
+
+.quote span {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+  background: #1f1f1f;
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+}
