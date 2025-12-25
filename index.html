@@ -9,8 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -28,14 +27,16 @@
       <li><a href="discography.html">Discography</a></li>
       <li><a href="contact.html">Contact</a></li>
 
-      <!-- Language Dropdown -->
-      <li>
-        <a href="#">Language</a>
-        <ul>
+      <!-- 🔧 ONLY FIX IS HERE -->
+      <li class="lang-menu">
+        <a href="#">🌐 Language</a>
+        <ul class="lang-dropdown">
           <li><a href="#" data-set-lang="en">English</a></li>
           <li><a href="#" data-set-lang="mr">मराठी</a></li>
         </ul>
       </li>
+      <!-- 🔧 FIX ENDS -->
+
     </ul>
   </nav>
 </header>
@@ -160,7 +161,6 @@
   <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
 </footer>
 
-<!-- Language Logic -->
 <script src="language.js"></script>
 
 </body>
