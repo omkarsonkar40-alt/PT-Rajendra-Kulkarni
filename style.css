@@ -86,6 +86,44 @@ nav ul li a:hover {
 }
 
 /* =========================
+   Language Dropdown Menu
+   ========================= */
+.lang-menu {
+  position: relative;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  list-style: none;
+  padding: 8px 0;
+  min-width: 140px;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 2000;
+}
+
+.lang-dropdown li a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.lang-dropdown li a:hover {
+  background-color: var(--bg-soft);
+  color: var(--accent);
+}
+
+.lang-menu:hover .lang-dropdown {
+  display: block;
+}
+
+/* =========================
    Hero Section
    ========================= */
 .hero {
