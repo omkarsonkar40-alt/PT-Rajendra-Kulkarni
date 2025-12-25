@@ -1,52 +1,53 @@
 /* =========================
-   Language Switcher Logic
+   Language Switcher Logic (Corrected)
    ========================= */
 
 (function () {
   const DEFAULT_LANG = "en";
   const STORAGE_KEY = "site_language";
 
-  // Get saved language or default
+  // 1. Determine language (Saved or Default)
   function getCurrentLanguage() {
     return localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
   }
 
-  // Save language choice
+  // 2. Set Language on <html> tag and Save to LocalStorage
   function setLanguage(lang) {
-    localStorage.setItem(STORAGE_KEY, lang);
-    applyLanguage(lang);
-  }
-
-  // Show / hide language blocks
-  function applyLanguage(lang) {
-    const allLangBlocks = document.querySelectorAll("[data-lang]");
-    allLangBlocks.forEach(block => {
-      block.style.display =
-        block.getAttribute("data-lang") === lang ? "block" : "none";
-    });
-
-    // Update page language attribute
     document.documentElement.setAttribute("lang", lang);
+    localStorage.setItem(STORAGE_KEY, lang);
   }
 
-  // Setup language select (combo box)
-  function setupLanguageSwitcher() {
+  // 3. Initialize Language on Page Load
+  function initLanguage() {
+    const currentLang = getCurrentLanguage();
+    setLanguage(currentLang);
+    
+    // Update the Combo Box value if it exists on page
+    const select = document.getElementById("language-switcher");
+    if (select) {
+      select.value = currentLang;
+    }
+  }
+
+  // 4. Setup Event Listeners for the Combo Box
+  function setupListener() {
     const select = document.getElementById("language-switcher");
     if (!select) return;
 
-    // Set saved language as selected value
-    select.value = getCurrentLanguage();
-
-    // Change language on selection
     select.addEventListener("change", function () {
       setLanguage(this.value);
     });
   }
 
-  // Initialize on page load
+  // Run immediately to prevent flash (if script is loaded in head or high up)
+  // or runs normally at end of body.
+  initLanguage();
+
+  // Wait for DOM to ensure element exists before attaching listeners
   document.addEventListener("DOMContentLoaded", function () {
-    const currentLang = getCurrentLanguage();
-    applyLanguage(currentLang);
-    setupLanguageSwitcher();
+    // Re-run init in case the select box wasn't ready the first time
+    initLanguage(); 
+    setupListener();
   });
+
 })();

@@ -29,12 +29,21 @@ body {
 }
 
 /* =========================
-   Language Handling
+   Language Handling (CORRECTED)
    ========================= */
-/* English visible by default */
-[data-lang="mr"] {
-  display: none;
+
+/* 1. When HTML lang is 'en' (default), hide Marathi */
+html[lang="en"] [data-lang="mr"] {
+  display: none !important;
 }
+
+/* 2. When HTML lang is 'mr', hide English */
+html[lang="mr"] [data-lang="en"] {
+  display: none !important;
+}
+
+/* Note: We do NOT use 'display: block' to show elements.
+   We simply stop hiding them. This preserves flex/grid layouts. */
 
 /* =========================
    Header & Navigation
@@ -105,7 +114,6 @@ nav ul li a:hover {
   border-color: var(--accent);
 }
 
-/* Accessibility helper */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -173,6 +181,7 @@ nav ul li a:hover {
   padding: 30px;
   border-left: 4px solid var(--accent);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  /* The layout (grid/block) is preserved because JS doesn't touch it */
 }
 
 .highlight-item h3 {
