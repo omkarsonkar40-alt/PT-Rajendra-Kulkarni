@@ -1,253 +1,273 @@
 /* =========================
-   Root Variables
+   1. ROOT VARIABLES (The "Soul" Palette)
    ========================= */
 :root {
-  --bg-main: #f7f4ef;
-  --bg-soft: #efe9df;
-  --accent: #8b6b3e;
-  --text-dark: #1f1f1f;
-  --text-light: #555;
+  /* BACKGROUNDS */
+  --bg-main: #f9f7f2;  /* Organic Cream */
+  --bg-card: #ffffff;
+  
+  /* COLORS */
+  --color-indigo: #1a1f3c;    /* Night Sky / Meditation */
+  --color-saffron: #d35400;   /* Spiritual Energy */
+  --color-saffron-light: #e67e22;
+  
+  /* TEXT */
+  --text-main: #2c3e50;
+  --text-muted: #5d6d7e;
+
+  /* THE GOLD GRADIENT (Mastery) */
+  --gold-gradient: linear-gradient(
+    135deg, 
+    #bfa45d 0%, 
+    #fcf6ba 40%, 
+    #d4af37 60%, 
+    #fbf5b7 80%, 
+    #aa771c 100%
+  );
 }
 
 /* =========================
-   Global Reset
+   2. BASE & TEXTURE
    ========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* =========================
-   Base Styles
-   ========================= */
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-main);
-  color: var(--text-dark);
+  color: var(--text-main);
   line-height: 1.7;
+  overflow-x: hidden;
+  /* NOISE TEXTURE: Adds the "Handmade Paper" feel */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
 }
+
+/* Marathi Font Class */
+.mr-font { font-family: 'Mukta', sans-serif; }
+
+/* Skip Link */
+.skip-link {
+  position: absolute; top: -40px; left: 0;
+  background: var(--color-saffron); color: #fff;
+  padding: 10px; z-index: 10001; font-weight: bold;
+  transition: top 0.3s;
+}
+.skip-link:focus { top: 0; }
+
+/* Language Hiding Logic */
+html[lang="en"] [data-lang="mr"] { display: none !important; }
+html[lang="mr"] [data-lang="en"] { display: none !important; }
 
 /* =========================
-   Language Handling (CORRECTED)
-   ========================= */
-
-/* 1. When HTML lang is 'en' (default), hide Marathi */
-html[lang="en"] [data-lang="mr"] {
-  display: none !important;
-}
-
-/* 2. When HTML lang is 'mr', hide English */
-html[lang="mr"] [data-lang="en"] {
-  display: none !important;
-}
-
-/* Note: We do NOT use 'display: block' to show elements.
-   We simply stop hiding them. This preserves flex/grid layouts. */
-
-/* =========================
-   Header & Navigation
+   3. HEADER
    ========================= */
 header {
-  background: rgba(247, 244, 239, 0.95);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #ddd;
+  background: rgba(249, 247, 242, 0.95);
+  position: sticky; top: 0; z-index: 1000;
+  border-bottom: 2px solid rgba(211, 84, 0, 0.1); /* Faint Saffron line */
+  backdrop-filter: blur(5px);
 }
 
 nav {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 20px;
+  max-width: 1200px; margin: auto;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 20px;
 }
 
-nav .logo {
+.logo {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--accent);
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--color-indigo);
+  letter-spacing: 0.5px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
+.nav-links { list-style: none; display: flex; gap: 30px; align-items: center; }
 
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-size: 14px;
-  font-weight: 500;
+.nav-links a {
+  text-decoration: none; color: var(--text-main);
+  font-size: 0.95rem; font-weight: 500;
   transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: var(--accent);
-}
+.nav-links a:hover { color: var(--color-saffron); }
 
-/* =========================
-   Language Combo Box
-   ========================= */
+/* Language Dropdown */
 .lang-select select {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: var(--text-dark);
-  cursor: pointer;
+  padding: 5px 10px; border: 1px solid #ccc;
+  border-radius: 4px; background: #fff;
+  color: var(--color-indigo); cursor: pointer;
 }
 
-.lang-select select:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+/* Mobile Menu Button */
+.mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; }
+.bar {
+  display: block; width: 28px; height: 3px; margin: 6px auto;
+  background-color: var(--color-indigo); transition: 0.3s;
 }
 
 /* =========================
-   Hero Section
+   4. HERO SECTION (Gold + Style C)
    ========================= */
 .hero {
-  background: linear-gradient(to right, #f7f4ef, #efe9df);
-  padding: 90px 20px;
+  padding: 40px 20px 0 20px;
+  position: relative; overflow: hidden;
+  /* Soft gradient background */
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(26, 31, 60, 0.05) 100%);
 }
 
-.hero-content {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
+.hero-container {
+  max-width: 1100px; margin: auto;
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 85vh;
 }
 
-.hero h1 {
+.hero-text { flex: 1; padding-right: 50px; z-index: 5; }
+
+/* THE GOLD NAME */
+.gold-text {
   font-family: 'Playfair Display', serif;
-  font-size: 46px;
-  margin-bottom: 10px;
+  font-size: 4rem; font-weight: 800;
+  line-height: 1.1; margin-bottom: 10px;
+  
+  /* Gold Logic */
+  background: var(--gold-gradient);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.15));
 }
 
-.hero h2 {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--accent);
-  margin-bottom: 30px;
+.subtitle {
+  font-size: 1.3rem; font-weight: 500;
+  color: var(--color-indigo);
+  margin-bottom: 25px;
+  border-left: 4px solid var(--color-saffron); /* Saffron Line */
+  padding-left: 15px;
 }
 
-.hero p {
-  font-size: 17px;
-  color: var(--text-light);
-  max-width: 750px;
-  margin: auto;
+.saffron-dot { color: var(--color-saffron); font-weight: bold; }
+
+.hero-desc {
+  font-size: 1.1rem; color: var(--text-muted);
+  margin-bottom: 40px; max-width: 550px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block; padding: 14px 32px;
+  background-color: var(--color-saffron); color: #fff;
+  text-decoration: none; border-radius: 50px;
+  font-weight: 600; box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: var(--color-saffron-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(211, 84, 0, 0.4);
+}
+
+/* CUTOUT IMAGE */
+.hero-image-wrapper {
+  flex: 1; position: relative;
+  display: flex; justify-content: center; align-items: flex-end;
+  height: 100%;
+}
+
+.hero-img-cutout {
+  width: 100%; max-width: 550px; height: auto;
+  filter: drop-shadow(10px 10px 30px rgba(26, 31, 60, 0.3)); /* 3D Shadow */
+  position: relative; z-index: 2;
+  transition: transform 0.5s ease;
+}
+.hero-img-cutout:hover { transform: scale(1.02); }
+
+/* THE AURA (Circle behind Guru) */
+.aura-circle {
+  position: absolute; top: 15%; right: 5%;
+  width: 450px; height: 450px;
+  background: rgba(26, 31, 60, 0.05); /* Very faint Indigo */
+  border: 1px solid rgba(211, 84, 0, 0.2); /* Faint Saffron border */
+  border-radius: 50%; z-index: 1;
 }
 
 /* =========================
-   Highlight Section
+   5. HIGHLIGHT & QUOTE
    ========================= */
-.highlight {
-  background-color: var(--bg-soft);
-  padding: 70px 20px;
-}
+.highlight { padding: 90px 20px; position: relative; }
 
 .highlight-box {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px; margin: auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
 }
 
 .highlight-item {
-  background: #fff;
-  padding: 30px;
-  border-left: 4px solid var(--accent);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-  /* The layout (grid/block) is preserved because JS doesn't touch it */
+  background: #fff; padding: 35px; border-radius: 8px;
+  border-top: 4px solid var(--color-indigo); /* Indigo Top Border */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
+.highlight-item:hover { transform: translateY(-5px); }
 
 .highlight-item h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-  font-size: 22px;
+  font-family: 'Playfair Display', serif; font-size: 1.5rem;
+  color: var(--color-saffron); margin-bottom: 15px;
 }
 
-.highlight-item p {
-  font-size: 15px;
-  color: var(--text-light);
-}
-
-/* =========================
-   Quote Section
-   ========================= */
+/* QUOTE SECTION */
 .quote {
-  padding: 80px 20px;
-  text-align: center;
+  padding: 100px 20px; text-align: center;
+  background-color: #f4f1ea; 
 }
-
 .quote blockquote {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-style: italic;
-  max-width: 800px;
-  margin: auto;
-  color: #333;
+  font-family: 'Playfair Display', serif; font-size: 2rem;
+  font-style: italic; max-width: 850px; margin: auto;
+  color: var(--color-indigo);
 }
-
-.quote span {
-  display: block;
-  margin-top: 15px;
-  font-size: 14px;
-  color: var(--accent);
+.quote cite {
+  display: block; margin-top: 25px; font-size: 1rem;
+  font-style: normal; color: var(--color-saffron);
+  font-weight: 700; text-transform: uppercase;
 }
 
 /* =========================
-   Footer
+   6. FOOTER
    ========================= */
 footer {
-  background: #1f1f1f;
-  color: #ccc;
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 14px;
+  background: var(--color-indigo); color: #b0b8c6;
+  padding: 60px 20px; text-align: center;
+  border-top: 5px solid var(--color-saffron);
 }
-
-footer p {
-  margin-bottom: 8px;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #fff;
-}
+footer a { color: #fff; text-decoration: none; }
+footer a:hover { color: var(--color-saffron); }
 
 /* =========================
-   Responsive
+   7. MOBILE RESPONSIVE
    ========================= */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 34px;
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse; /* Image Top, Text Bottom */
+    text-align: center; padding-top: 10px;
   }
+  .hero-text { padding-right: 0; margin-top: 30px; padding-bottom: 60px; }
+  
+  .gold-text { font-size: 2.8rem; }
+  
+  /* Subtitle: Center alignment fix */
+  .subtitle {
+    border-left: none; border-bottom: 3px solid var(--color-saffron);
+    display: inline-block; padding-left: 0; padding-bottom: 5px;
+  }
+  
+  .hero-img-cutout { max-width: 320px; }
+  .aura-circle { width: 300px; height: 300px; top: 5%; right: auto; }
+
+  /* Mobile Nav */
+  .mobile-menu-btn { display: block; }
+  .nav-links {
+    position: fixed; top: 60px; left: 0; width: 100%;
+    background: #fff; flex-direction: column; padding: 30px;
+    border-bottom: 4px solid var(--color-saffron);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-150%); transition: transform 0.4s ease;
+  }
+  .nav-links.active { transform: translateY(0); }
 }

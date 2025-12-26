@@ -2,147 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pt. Rajendra Kulkarni | Flute Maestro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <title>Pt. Rajendra Kulkarni | Flute Maestro</title>
+  <meta name="description" content="The official biography of Bansuri Maestro Pt. Rajendra Kulkarni.">
+  <meta name="theme-color" content="#1a1f3c"> <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Mukta:wght@400;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">Pt. Rajendra Kulkarni</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="gurus.html">Gurus</a></li>
-      <li><a href="style.html">Musical Style</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="discography.html">Discography</a></li>
-      <li><a href="contact.html">Contact</a></li>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-      <li class="lang-select">
-        <label for="language-switcher" class="visually-hidden">Language</label>
-        <select id="language-switcher">
-          <option value="en">English</option>
-          <option value="mr">मराठी</option>
-        </select>
-      </li>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Pt. Rajendra Kulkarni</div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-    </ul>
-  </nav>
-</header>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="gurus.html">Gurus</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-<section class="hero">
-  <div class="hero-content">
+        <li class="lang-select">
+          <label for="language-switcher" class="visually-hidden">Select Language</label>
+          <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <div data-lang="en">
-      <h1>Pt. Rajendra Kulkarni</h1>
-      <h2>Flute Maestro · Hindustani Classical Music</h2>
-      <p>
-        An outstanding Bansuri maestro renowned for a self-developed and distinctive
-        approach to Hindustani classical instrumental music. His artistry reflects
-        decades of dedicated practice, deep contemplation, and an unwavering commitment
-        to the flute as a complete and expressive musical medium.
-      </p>
+  <main id="main-content">
+
+    <section class="hero">
+      <div class="texture-overlay"></div>
+
+      <div class="hero-container">
+        
+        <div class="hero-text">
+          
+          <div data-lang="en">
+            <h1 class="gold-text">Pt. Rajendra Kulkarni</h1>
+            <h2 class="subtitle">Flute Maestro <span class="saffron-dot">·</span> Hindustani Classical Music</h2>
+            <p class="hero-desc">
+              An outstanding Bansuri maestro renowned for a self-developed and distinctive approach. 
+              His artistry reflects decades of dedicated practice (Riyaaz), deep contemplation, 
+              and an unwavering commitment to the flute.
+            </p>
+            <div class="cta-group">
+              <a href="journey.html" class="btn btn-primary">Read His Journey</a>
+            </div>
+          </div>
+
+          <div data-lang="mr">
+            <h1 class="gold-text mr-font">पं. राजेंद्र कुलकर्णी</h1>
+            <h2 class="subtitle mr-font">बांसुरी वादक <span class="saffron-dot">·</span> हिंदुस्थानी शास्त्रीय संगीत</h2>
+            <p class="hero-desc mr-font">
+              स्वतः विकसित केलेल्या आणि वैशिष्ट्यपूर्ण शैलीसाठी प्रसिद्ध असलेले उत्कृष्ट बांसुरी वादक. 
+              दीर्घकालीन साधना, चिंतन आणि बांसुरीला संपूर्ण अभिव्यक्त माध्यम मानणारी त्यांची संगीतसाधना 
+              त्यांच्या कलात्मकतेचे प्रतिबिंब आहे.
+            </p>
+            <div class="cta-group">
+              <a href="journey.html" class="btn btn-primary mr-font">जीवनप्रवास वाचा</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="aura-circle"></div>
+          <img src="guru-hero.png" alt="Pt. Rajendra Kulkarni playing the Bansuri" class="hero-img-cutout">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="highlight">
+      <div class="highlight-box">
+        
+        <article class="highlight-item">
+          <div data-lang="en">
+            <h3>Flute as Core Expression</h3>
+            <p>The Bansuri stands at the very heart of his musical journey. His playing embodies tonal purity and a deeply meditative quality.</p>
+          </div>
+          <div data-lang="mr">
+            <h3 class="mr-font">बांसुरी – अभिव्यक्तीचे केंद्र</h3>
+            <p class="mr-font">बांसुरी ही त्यांच्या संगीत प्रवासाची मध्यवर्ती प्रेरणा आहे. शुद्ध स्वर आणि ध्यानात्मक भाव त्यांच्या वादनात उतरलेले दिसतात.</p>
+          </div>
+        </article>
+
+        <article class="highlight-item">
+          <div data-lang="en">
+            <h3>A Distinct Musical Path</h3>
+            <p>He has evolved a personal style that remains rooted in tradition while expressing an unmistakable individual musical voice.</p>
+          </div>
+          <div data-lang="mr">
+            <h3 class="mr-font">एक स्वतंत्र संगीतमार्ग</h3>
+            <p class="mr-font">परंपरेशी निष्ठा राखत स्वतंत्र चिंतनातून विकसित झालेली त्यांची शैली वैयक्तिक संगीतस्वरूप अधोरेखित करते.</p>
+          </div>
+        </article>
+
+        <article class="highlight-item">
+          <div data-lang="en">
+            <h3>Performer, Guru & Guide</h3>
+            <p>Revered as a flautist and respected as a teacher, known for his openness, humility, and willingness to guide seekers.</p>
+          </div>
+          <div data-lang="mr">
+            <h3 class="mr-font">कलावंत, गुरु आणि मार्गदर्शक</h3>
+            <p class="mr-font">उत्कृष्ट बांसुरीवादक असण्याबरोबरच, शिष्यांसाठी ते नम्र, मार्गदर्शक आणि प्रेरणादायी गुरु म्हणून ओळखले जातात.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="quote-container">
+        <blockquote data-lang="en">
+          “The flute is complete in itself — it speaks, sings, and meditates.”
+          <cite>— Pt. Rajendra Kulkarni</cite>
+        </blockquote>
+
+        <blockquote data-lang="mr">
+          “बांसुरी ही स्वतःमध्येच संपूर्ण आहे — ती बोलते, गाते आणि ध्यान करते.”
+          <cite class="mr-font">— पं. राजेंद्र कुलकर्णी</cite>
+        </blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
+      <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
     </div>
+  </footer>
 
-    <div data-lang="mr">
-      <h1>पं. राजेंद्र कुलकर्णी</h1>
-      <h2>बांसुरी वादक · हिंदुस्थानी शास्त्रीय संगीत</h2>
-      <p>
-        स्वतः विकसित केलेल्या आणि वैशिष्ट्यपूर्ण शैलीसाठी प्रसिद्ध असलेले
-        उत्कृष्ट बांसुरी वादक. दीर्घकालीन साधना, चिंतन आणि बांसुरीला
-        संपूर्ण अभिव्यक्त माध्यम मानणारी त्यांची संगीतसाधना
-        त्यांच्या कलात्मकतेचे प्रतिबिंब आहे.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="highlight">
-  <div class="highlight-box">
-
-    <div data-lang="en" class="highlight-item">
-      <h3>Flute as the Core Expression</h3>
-      <p>
-        The Bansuri stands at the very heart of his musical journey. His playing
-        embodies tonal purity, melodic clarity, and a deeply meditative quality
-        shaped through years of disciplined riyaaz and performance.
-      </p>
-    </div>
-
-    <div data-lang="en" class="highlight-item">
-      <h3>A Distinct Musical Path</h3>
-      <p>
-        Through independent thinking and long-term artistic exploration, he has
-        evolved a personal style that remains rooted in tradition while expressing
-        an unmistakable individual musical voice.
-      </p>
-    </div>
-
-    <div data-lang="en" class="highlight-item">
-      <h3>Performer, Guru & Guide</h3>
-      <p>
-        Revered as a flautist and respected as a teacher, he is known among disciples
-        for his openness, humility, and willingness to guide seekers of classical
-        music with patience and clarity.
-      </p>
-    </div>
-
-    <div data-lang="mr" class="highlight-item">
-      <h3>बांसुरी – अभिव्यक्तीचे केंद्र</h3>
-      <p>
-        बांसुरी ही त्यांच्या संगीत प्रवासाची मध्यवर्ती प्रेरणा आहे.
-        शुद्ध स्वर, स्पष्ट रागदारी आणि ध्यानात्मक भाव
-        दीर्घकाळच्या साधनेतून त्यांच्या वादनात उतरलेले दिसतात.
-      </p>
-    </div>
-
-    <div data-lang="mr" class="highlight-item">
-      <h3>एक स्वतंत्र संगीतमार्ग</h3>
-      <p>
-        परंपरेशी निष्ठा राखत स्वतंत्र चिंतनातून विकसित झालेली
-        त्यांच्या शैली वैयक्तिक संगीतस्वरूप अधोरेखित करते.
-      </p>
-    </div>
-
-    <div data-lang="mr" class="highlight-item">
-      <h3>कलावंत, गुरु आणि मार्गदर्शक</h3>
-      <p>
-        उत्कृष्ट बांसुरीवादक असण्याबरोबरच,
-        शिष्यांसाठी ते नम्र, मार्गदर्शक आणि प्रेरणादायी गुरु म्हणून ओळखले जातात.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="quote">
-
-  <blockquote data-lang="en">
-    “The flute is complete in itself — it speaks, sings, and meditates.”
-    <span>— Pt. Rajendra Kulkarni</span>
-  </blockquote>
-
-  <blockquote data-lang="mr">
-    “बांसुरी ही स्वतःमध्येच संपूर्ण आहे — ती बोलते, गाते आणि ध्यान करते.”
-    <span>— पं. राजेंद्र कुलकर्णी</span>
-  </blockquote>
-
-</section>
-
-<footer>
-  <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
-  <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
-</footer>
-
-<script src="language.js"></script>
+  <script src="language.js"></script>
 
 </body>
 </html>

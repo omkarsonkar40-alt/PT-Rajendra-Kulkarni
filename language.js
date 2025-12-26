@@ -1,53 +1,44 @@
-/* =========================
-   Language Switcher Logic (Corrected)
-   ========================= */
-
 (function () {
   const DEFAULT_LANG = "en";
   const STORAGE_KEY = "site_language";
 
-  // 1. Determine language (Saved or Default)
-  function getCurrentLanguage() {
-    return localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
-  }
-
-  // 2. Set Language on <html> tag and Save to LocalStorage
+  // 1. Language Handling
   function setLanguage(lang) {
     document.documentElement.setAttribute("lang", lang);
     localStorage.setItem(STORAGE_KEY, lang);
   }
 
-  // 3. Initialize Language on Page Load
   function initLanguage() {
-    const currentLang = getCurrentLanguage();
-    setLanguage(currentLang);
-    
-    // Update the Combo Box value if it exists on page
+    const savedLang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
+    setLanguage(savedLang);
     const select = document.getElementById("language-switcher");
-    if (select) {
-      select.value = currentLang;
+    if (select) select.value = savedLang;
+  }
+
+  // 2. Mobile Menu Handling
+  function setupMobileMenu() {
+    const btn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav-links');
+
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        btn.setAttribute('aria-expanded', nav.classList.contains('active'));
+      });
     }
   }
 
-  // 4. Setup Event Listeners for the Combo Box
-  function setupListener() {
-    const select = document.getElementById("language-switcher");
-    if (!select) return;
-
-    select.addEventListener("change", function () {
-      setLanguage(this.value);
-    });
-  }
-
-  // Run immediately to prevent flash (if script is loaded in head or high up)
-  // or runs normally at end of body.
-  initLanguage();
-
-  // Wait for DOM to ensure element exists before attaching listeners
+  // 3. Initialize
   document.addEventListener("DOMContentLoaded", function () {
-    // Re-run init in case the select box wasn't ready the first time
-    initLanguage(); 
-    setupListener();
+    initLanguage();
+    setupMobileMenu();
+
+    const select = document.getElementById("language-switcher");
+    if (select) {
+      select.addEventListener("change", function () {
+        setLanguage(this.value);
+      });
+    }
   });
 
 })();
