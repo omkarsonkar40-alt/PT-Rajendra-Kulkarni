@@ -2,97 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Awards & Honors | Pt. Rajendra Kulkarni</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awards & Honors | Pt. Rajendra Kulkarni</title>
+  
+  <meta name="theme-color" content="#1a1f3c">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Mukta:wght@400;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">Pt. Rajendra Kulkarni</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="gurus.html">Gurus</a></li>
-      <li><a href="style.html">Musical Style</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="discography.html">Discography</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Awards & Honors</h1>
-    <p>
-      Recognition earned through years of dedication,
-      discipline, and contribution to Hindustani classical music.
-    </p>
-  </div>
-</section>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Pt. Rajendra Kulkarni</div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<section class="content-section">
-  <div class="content-box">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="gurus.html">Gurus</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="awards.html" aria-current="page" class="active-link">Awards</a></li>
+        <li><a href="discography.html">Discography</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-    <h2>Major Recognitions</h2>
-    <ul>
-      <li>
-        Conferred the status of <strong>‘A-Grade’ Artist</strong> by
-        All India Radio and Doordarshan.
-      </li>
+        <li class="lang-select">
+          <label for="language-switcher" class="visually-hidden">Select Language</label>
+          <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-      <li>
-        Recipient of the prestigious <strong>‘Sur-Mani’ Award</strong>
-        by The Sur Singar Samsad. Following his performance,
-        <em>The Times of India</em> described him as a
-        “Find of the Sammelan” and a “Rising Maestro.”
-        This award was presented in 1981 while he was still a college student.
-      </li>
+  <main id="main-content">
+    
+    <section class="page-header">
+      <div class="header-content">
+        <div data-lang="en">
+          <h1 class="gold-text">Awards & Honors</h1>
+          <p class="subtitle">Recognition earned through years of dedication, discipline, and sadhana.</p>
+        </div>
+        <div data-lang="mr">
+          <h1 class="gold-text mr-font">पुरस्कार आणि सन्मान</h1>
+          <p class="subtitle mr-font">दीर्घकालीन साधना, शिस्त आणि सांगीतिक योगदानाचा गौरव.</p>
+        </div>
+      </div>
+    </section>
 
-      <li>
-        Awarded the degree of <strong>‘Sangeet Alankar’</strong> by
-        The Gandharva Mahavidyalaya Mandal, Mumbai,
-        securing the <strong>first rank</strong> in the instrumental category.
-      </li>
+    <section class="biography-section">
+      <div class="awards-grid">
+        
+        <article class="award-card">
+          <div data-lang="en">
+            <span class="award-org">All India Radio & Doordarshan</span>
+            <h2>'A-Grade' Artist</h2>
+            <p>Conferred the prestigious status of ‘A-Grade’ Artist, recognizing his mastery and consistency in performance.</p>
+          </div>
+          <div data-lang="mr">
+            <span class="award-org mr-font">आकाशवाणी आणि दूरदर्शन</span>
+            <h2 class="mr-font">'अ-श्रेणी' (A-Grade) कलाकार</h2>
+            <p class="mr-font">आकाशवाणी आणि दूरदर्शनद्वारे 'अ-श्रेणी' कलाकार म्हणून गौरव, जो त्यांच्या वादनातील नैपुण्य आणि सातत्याची पावती आहे.</p>
+          </div>
+        </article>
 
-      <li>
-        Honoured as an <strong>Honorary Artist</strong> of
-        <strong>SPIC-MACAY</strong> since its inception,
-        contributing to the promotion of Indian classical music
-        among the youth.
-      </li>
+        <article class="award-card">
+          <div data-lang="en">
+            <span class="award-org">Sur Singar Samsad (1981)</span>
+            <h2>'Sur-Mani' Award</h2>
+            <p>
+              Described by <em>The Times of India</em> as the “Find of the Sammelan” and a “Rising Maestro.” 
+              This award was presented while he was still a college student.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <span class="award-org mr-font">सूर-सिंगार संसद (१९८१)</span>
+            <h2 class="mr-font">'सूर-मणी' पुरस्कार</h2>
+            <p class="mr-font">
+              हा पुरस्कार स्वीकारताना <em>टाइम्स ऑफ इंडिया</em> ने त्यांचा उल्लेख "संमेलनाचा शोध" आणि "उदयोन्मुख उस्ताद" असा केला होता. 
+              महाविद्यालयीन शिक्षण घेत असतानाच त्यांना हा बहुमान मिळाला.
+            </p>
+          </div>
+        </article>
 
-      <li>
-        Recipient of the <strong>‘Yuva Kalakar’ Award</strong> from
-        Sangeetonmesh Sanstha, Pune, presented by
-        Pt. Bhimsen Joshi.
-      </li>
+        <article class="award-card">
+          <div data-lang="en">
+            <span class="award-org">Gandharva Mahavidyalaya Mandal</span>
+            <h2>Sangeet Alankar</h2>
+            <p>
+              Awarded the degree of ‘Sangeet Alankar’ by the Gandharva Mahavidyalaya Mandal, Mumbai, 
+              securing the <strong>First Rank</strong> in the instrumental category.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <span class="award-org mr-font">गंधर्व महाविद्यालय मंडळ, मुंबई</span>
+            <h2 class="mr-font">संगीत अलंकार</h2>
+            <p class="mr-font">
+              वाद्य संगीत श्रेणीमध्ये <strong>प्रथम क्रमांक</strong> पटकावून गंधर्व महाविद्यालय मंडळाची 
+              प्रतिष्ठित 'संगीत अलंकार' पदवी प्राप्त केली.
+            </p>
+          </div>
+        </article>
 
-      <li>
-        Honoured with the <strong>‘Late Pt. B. S. Upadhye Puraskar’</strong>,
-        Pune, in the year 2002.
-      </li>
-    </ul>
+        <article class="award-card highlight-card">
+          <div data-lang="en">
+            <span class="award-org">Sangeetonmesh Sanstha, Pune</span>
+            <h2>'Yuva Kalakar' Award</h2>
+            <p>
+              A special honour presented at the hands of the legendary <strong>Bharat Ratna Pt. Bhimsen Joshi</strong>, 
+              marking a significant milestone in his youth.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <span class="award-org mr-font">संगीतोनमेष संस्था, पुणे</span>
+            <h2 class="mr-font">'युवा कलाकार' पुरस्कार</h2>
+            <p class="mr-font">
+              थोर गायक <strong>भारतरत्न पं. भीमसेन जोशी</strong> यांच्या शुभहस्ते प्रदान करण्यात आलेला हा एक विशेष सन्मान.
+            </p>
+          </div>
+        </article>
 
-  </div>
-</section>
+        <article class="award-card">
+          <div data-lang="en">
+            <span class="award-org">SPIC-MACAY</span>
+            <h2>Honorary Artist</h2>
+            <p>
+              Associated as an Honorary Artist since the inception of SPIC-MACAY, contributing significantly 
+              to the promotion of Indian classical music among the youth across India.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <span class="award-org mr-font">स्पिक-मॅके (SPIC-MACAY)</span>
+            <h2 class="mr-font">मानद कलाकार</h2>
+            <p class="mr-font">
+              स्पिक-मॅकेच्या स्थापनेपासूनच 'मानद कलाकार' म्हणून संलग्न. तरुण पिढीमध्ये भारतीय शास्त्रीय संगीताचा 
+              प्रसार करण्यात त्यांचे मोलाचे योगदान आहे.
+            </p>
+          </div>
+        </article>
 
-<footer>
-  <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
-  <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
-</footer>
+        <article class="award-card">
+          <div data-lang="en">
+            <span class="award-org">Pune (2002)</span>
+            <h2>Pt. B. S. Upadhye Puraskar</h2>
+            <p>Honoured with the ‘Late Pt. B. S. Upadhye Puraskar’ in recognition of his service to music.</p>
+          </div>
+          <div data-lang="mr">
+            <span class="award-org mr-font">पुणे (२००२)</span>
+            <h2 class="mr-font">कै. पं. बी. एस. उपाध्ये पुरस्कार</h2>
+            <p class="mr-font">संगीतातील त्यांच्या योगदानाबद्दल 'कै. पं. बी. एस. उपाध्ये पुरस्कारा'ने सन्मानित करण्यात आले.</p>
+          </div>
+        </article>
 
-<script src="language.js"></script>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
+      <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="language.js"></script>
 
 </body>
 </html>

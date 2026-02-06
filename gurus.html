@@ -2,119 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gurus & Inspiration | Pt. Rajendra Kulkarni</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gurus & Inspiration | Pt. Rajendra Kulkarni</title>
+  
+  <meta name="theme-color" content="#1a1f3c">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Mukta:wght@400;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">Pt. Rajendra Kulkarni</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="gurus.html">Gurus</a></li>
-      <li><a href="style.html">Musical Style</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="discography.html">Discography</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Gurus & Inspiration</h1>
-    <p>
-      A musical journey shaped by lineage, guidance, and an atmosphere
-      deeply immersed in Hindustani classical tradition.
-    </p>
-  </div>
-</section>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Pt. Rajendra Kulkarni</div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<section class="content-section">
-  <div class="content-box">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="gurus.html" aria-current="page" class="active-link">Gurus</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="discography.html">Discography</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-    <h2>Family & Musical Environment</h2>
-    <p>
-      Pt. Rajendra Kulkarni was born into a family of art lovers and connoisseurs,
-      where music formed an integral part of everyday life. His mother would often
-      sing melodious songs and poems during her household activities, creating a
-      naturally musical environment at home.
-    </p>
+        <li class="lang-select">
+          <label for="language-switcher" class="visually-hidden">Select Language</label>
+          <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <p>
-      His elder sister pursued Hindustani classical vocal music under the guidance
-      of a visiting guru, further enriching the musical atmosphere that surrounded
-      him during his formative years.
-    </p>
+  <main id="main-content">
+    
+    <section class="page-header">
+      <div class="header-content">
+        <div data-lang="en">
+          <h1 class="gold-text">Gurus & Inspiration</h1>
+          <p class="subtitle">A musical journey shaped by lineage, guidance, and tradition.</p>
+        </div>
+        <div data-lang="mr">
+          <h1 class="gold-text mr-font">गुरु आणि प्रेरणास्थान</h1>
+          <p class="subtitle mr-font">परंपरा, मार्गदर्शन आणि संस्कारांनी घडलेला सांगीतिक प्रवास.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>First Guru — Pt. Balasaheb Kulkarni</h2>
-    <p>
-      His first Guru was his father, Pt. Balasaheb Kulkarni – Bedakihalkar,
-      an eminent flautist and radio artist proficient in both flute and violin.
-      Under his guidance, Rajendraji was introduced to the discipline,
-      aesthetics, and foundational principles of classical music.
-    </p>
+    <section class="biography-section">
+      <div class="guru-container">
+        
+        <article class="guru-card">
+          <div data-lang="en">
+            <h2>Family & Musical Environment</h2>
+            <p>
+              Pt. Rajendra Kulkarni was born into a family of art lovers and connoisseurs, where music formed an integral part of everyday life. 
+              His mother would often sing melodious songs and poems during her household activities, creating a naturally musical environment at home.
+              His elder sister pursued Hindustani classical vocal music under the guidance of a visiting guru, further enriching the atmosphere during his formative years.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <h2 class="mr-font">कौटुंबिक आणि सांगीतिक वातावरण</h2>
+            <p class="mr-font">
+              पं. राजेंद्र कुलकर्णी यांचा जन्म एका कलाप्रेमी कुटुंबात झाला, जिथे संगीत हा दैनंदिन जीवनाचा अविभाज्य भाग होता. 
+              त्यांच्या मातोश्री घरकामात असताना अनेकदा सुमधुर गाणी आणि कविता गुणगुणत असत, ज्यामुळे घरात नैसर्गिकरित्या संगीतमय वातावरण निर्माण झाले होते.
+              त्यांच्या मोठ्या बहिणीने एका गुरूंच्या मार्गदर्शनाखाली हिंदुस्थानी शास्त्रीय गायनाचे धडे गिरवले, ज्यामुळे त्यांच्या जडणघडणीच्या काळात घरातील सांगीतिक वातावरण अधिकच समृद्ध झाले.
+            </p>
+          </div>
+        </article>
 
-    <p>
-      Frequent visits by musicians and discussions on classical music at home
-      exposed him early to the theoretical and practical dimensions of the art,
-      laying a strong and authentic foundation for his future growth as a flautist.
-    </p>
+        <article class="guru-card featured-guru">
+          <div data-lang="en">
+            <span class="role-badge">First Guru</span>
+            <h2>Pt. Balasaheb Kulkarni</h2>
+            <p>
+              His first Guru was his father, Pt. Balasaheb Kulkarni – Bedakihalkar, an eminent flautist and radio artist proficient in both flute and violin. 
+              Under his guidance, Rajendraji was introduced to the discipline, aesthetics, and foundational principles of classical music.
+            </p>
+            <p>
+              Frequent visits by musicians and discussions on classical music at home exposed him early to the theoretical and practical dimensions of the art, 
+              laying a strong and authentic foundation for his future growth.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <span class="role-badge mr-font">पहिले गुरु</span>
+            <h2 class="mr-font">पं. बाळासाहेब कुलकर्णी</h2>
+            <p class="mr-font">
+              त्यांचे पहिले गुरु त्यांचे वडील, पं. बाळासाहेब कुलकर्णी - बेडकीहाळकर होते. ते एक प्रसिद्ध बांसुरी वादक आणि आकाशवाणीचे मान्यताप्राप्त कलाकार होते, 
+              ज्यांचे बांसुरी आणि व्हायोलिन या दोन्ही वाद्यांवर प्रभुत्व होते. त्यांच्या मार्गदर्शनाखाली राजेंद्रजींना शास्त्रीय संगीताची शिस्त, 
+              सौंदर्यशास्त्र आणि मूलभूत तत्त्वांची ओळख झाली.
+            </p>
+            <p class="mr-font">
+              घरी येणाऱ्या अनेक संगीतकारांच्या भेटीगाठी आणि शास्त्रीय संगीतावरील चर्चांमुळे त्यांना कलेच्या सैद्धांतिक आणि व्यावहारिक पैलूंची लवकर ओळख झाली, 
+              ज्यामुळे त्यांच्या सांगीतिक प्रवासाचा पाया भक्कम झाला.
+            </p>
+          </div>
+        </article>
 
-    <h2>Influence of Tabla Tradition</h2>
-    <p>
-      Late Shri Mammulal Sangawkar, a highly respected tabla maestro who had
-      accompanied legends such as Ustad Amir Khan, Ustad Bade Ghulam Ali Khan,
-      Pt. Bhimsen Joshi, and Balgandharva, often stayed at the Kulkarni residence
-      while travelling to Dharwad.
-    </p>
+        <article class="guru-card">
+          <div data-lang="en">
+            <h2>Influence of Tabla Tradition</h2>
+            <p>
+              Late Shri Mammulal Sangawkar, a highly respected tabla maestro who had accompanied legends such as Ustad Amir Khan, 
+              Ustad Bade Ghulam Ali Khan, and Pt. Bhimsen Joshi, often stayed at the Kulkarni residence.
+              This association provided Rajendraji with invaluable exposure to rhythmic intricacies (Laya) and the art of accompaniment.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <h2 class="mr-font">तबला परंपरेचा प्रभाव</h2>
+            <p class="mr-font">
+              उस्ताद अमीर खान, उस्ताद बडे गुलाम अली खान आणि पं. भीमसेन जोशी यांसारख्या दिग्गजांना साथसंगत करणारे 
+              आदरणीय तबला वादक, कै. श्री. मम्मुलाल सांगवकर यांचा मुक्काम अनेकदा कुलकर्णी यांच्या घरी असे.
+              या सहवासामुळे राजेंद्रजींना लयकारीतील बारकावे आणि वादनशैलीतील तालाचे महत्त्व समजून घेण्यास मोलाची मदत झाली.
+            </p>
+          </div>
+        </article>
 
-    <p>
-      This association provided Rajendraji with invaluable exposure to rhythmic
-      intricacies and the role of tabla in instrumental performance, deepening
-      his understanding of laya and accompaniment.
-    </p>
+        <article class="guru-card featured-guru">
+          <div data-lang="en">
+            <span class="role-badge">Second Guru</span>
+            <h2>Pt. Narayanrao Patwardhan</h2>
+            <p>
+              Rajendraji later came under the guidance of Pt. Narayanrao Patwardhan, a distinguished vocalist and the then Vice President 
+              of the Gandharva Mahavidyalaya, Delhi. Through in-depth discussions and musical interactions, he gained deeper insights into classical music, 
+              strengthening his conceptual clarity and artistic maturity.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <span class="role-badge mr-font">दुसरे गुरु</span>
+            <h2 class="mr-font">पं. नारायणराव पटवर्धन</h2>
+            <p class="mr-font">
+              पुढे राजेंद्रजींना गंधर्व महाविद्यालय, दिल्लीचे तत्कालीन उपाध्यक्ष आणि ज्येष्ठ गायक पं. नारायणराव पटवर्धन यांचे मार्गदर्शन लाभले. 
+              त्यांच्याशी झालेल्या सखोल चर्चा आणि सांगीतिक संवादामुळे राजेंद्रजींची संगीतातील समज अधिक प्रगल्भ झाली आणि त्यांच्या विचारसरणीला वैचारिक स्पष्टता मिळाली.
+            </p>
+          </div>
+        </article>
 
-    <h2>Second Guru — Pt. Narayanrao Patwardhan</h2>
-    <p>
-      Rajendraji later came under the guidance of Pt. Narayanrao Patwardhan,
-      a distinguished vocalist and the then Vice President of the Gandharva
-      Mahavidyalaya, Delhi.
-    </p>
+        <article class="guru-card">
+          <div data-lang="en">
+            <h2>Continuing the Parampara</h2>
+            <p>
+              Continuous devoted practice, committed performances, and contemplation of Hindustani classical music have ensured that 
+              Rajendraji’s artistry remains firmly rooted in tradition while evolving with personal insight.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <h2 class="mr-font">परंपरा आणि साधना</h2>
+            <p class="mr-font">
+              अविरत रियाज, समर्पित सादरीकरण आणि हिंदुस्थानी शास्त्रीय संगीताचे सखोल चिंतन यामुळे राजेंद्रजींची कला परंपरेशी बांधील राहूनही 
+              स्व-विकासाच्या मार्गावर अग्रेसर राहिली आहे.
+            </p>
+          </div>
+        </article>
 
-    <p>
-      Through in-depth discussions and musical interactions, he gained deeper
-      insights into classical music, strengthening his conceptual clarity
-      and artistic maturity.
-    </p>
+      </div>
+    </section>
 
-    <h2>Continuing the Parampara</h2>
-    <p>
-      Continuous devoted practice, committed performances, and contemplation
-      of Hindustani classical music have ensured that Rajendraji’s artistry
-      remains firmly rooted in tradition while evolving with personal insight.
-    </p>
+  </main>
 
-  </div>
-</section>
+  <footer>
+    <div class="footer-content">
+      <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
+      <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
+    </div>
+  </footer>
 
-<footer>
-  <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
-  <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
-</footer>
-
-<script src="language.js"></script>
+  <script src="language.js"></script>
 
 </body>
 </html>

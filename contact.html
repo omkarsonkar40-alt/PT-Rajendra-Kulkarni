@@ -2,75 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | Pt. Rajendra Kulkarni</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Pt. Rajendra Kulkarni</title>
+  
+  <meta name="theme-color" content="#1a1f3c">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Mukta:wght@400;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">Pt. Rajendra Kulkarni</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="gurus.html">Gurus</a></li>
-      <li><a href="style.html">Musical Style</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="discography.html">Discography</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Contact</h1>
-    <p>
-      For concerts, workshops, academic interactions,
-      and formal correspondence.
-    </p>
-  </div>
-</section>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Pt. Rajendra Kulkarni</div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<section class="content-section">
-  <div class="content-box">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="gurus.html">Gurus</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="discography.html">Discography</a></li>
+        <li><a href="contact.html" aria-current="page" class="active-link">Contact</a></li>
 
-    <h2>Correspondence Address</h2>
-    <p>
-      Flat 3, Building 7, Sanjana Residency<br>
-      Behind Madhukar Hospital, Anandnagar<br>
-      Sinhagad Road, Pune – 411 051<br>
-      Maharashtra, India
-    </p>
+        <li class="lang-select">
+          <label for="language-switcher" class="visually-hidden">Select Language</label>
+          <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <h2>Email</h2>
-    <p>
-      <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a>
-    </p>
+  <main id="main-content">
+    
+    <section class="page-header">
+      <div class="header-content">
+        <div data-lang="en">
+          <h1 class="gold-text">Contact</h1>
+          <p class="subtitle">For concerts, workshops, academic interactions, and formal correspondence.</p>
+        </div>
+        <div data-lang="mr">
+          <h1 class="gold-text mr-font">संपर्क</h1>
+          <p class="subtitle mr-font">मैफिली, कार्यशाळा आणि इतर शैक्षणिक उपक्रमांच्या विचारणेसाठी.</p>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      Please use email communication for concert enquiries,
-      workshops, lectures, and other professional engagements.
-    </p>
+    <section class="biography-section">
+      <div class="contact-card">
+        
+        <div class="contact-block">
+          <div data-lang="en">
+            <span class="contact-label">Correspondence Address</span>
+            <address>
+              Flat 3, Building 7, Sanjana Residency<br>
+              Behind Madhukar Hospital, Anandnagar<br>
+              Sinhagad Road, Pune – 411 051<br>
+              Maharashtra, India
+            </address>
+          </div>
+          <div data-lang="mr">
+            <span class="contact-label mr-font">पत्रव्यवहाराचा पत्ता</span>
+            <address class="mr-font">
+              फ्लॅट ३, बिल्डिंग ७, संजना रेसिडेन्सी<br>
+              मधुकर हॉस्पिटलच्या मागे, आनंदनगर<br>
+              सिंहगड रोड, पुणे – ४११ ०५१<br>
+              महाराष्ट्र, भारत
+            </address>
+          </div>
+        </div>
 
-  </div>
-</section>
+        <div class="contact-divider"></div>
 
-<footer>
-  <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
-  <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
-</footer>
+        <div class="contact-block email-block">
+          <div data-lang="en">
+            <span class="contact-label">Email Enquiry</span>
+            <p>Please use email for concert enquiries, workshops, and lectures.</p>
+            <a href="mailto:rajendrakul@gmail.com" class="btn contact-btn">rajendrakul@gmail.com</a>
+          </div>
+          <div data-lang="mr">
+            <span class="contact-label mr-font">ई-मेल (Email)</span>
+            <p class="mr-font">कार्यक्रम, कार्यशाळा आणि इतर व्यावसायिक विचारणांसाठी कृपया ई-मेलद्वारे संपर्क साधा.</p>
+            <a href="mailto:rajendrakul@gmail.com" class="btn contact-btn">rajendrakul@gmail.com</a>
+          </div>
+        </div>
 
-<script src="language.js"></script>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
+      <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="language.js"></script>
 
 </body>
 </html>

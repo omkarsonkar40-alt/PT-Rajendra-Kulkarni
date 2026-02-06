@@ -2,93 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Musical Style | Pt. Rajendra Kulkarni</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musical Style | Pt. Rajendra Kulkarni</title>
+  
+  <meta name="theme-color" content="#1a1f3c">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Mukta:wght@400;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">Pt. Rajendra Kulkarni</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="gurus.html">Gurus</a></li>
-      <li><a href="style.html">Musical Style</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="discography.html">Discography</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Musical Style</h1>
-    <p>
-      A self-developed flute tradition shaped by thought, discipline,
-      and decades of devoted exploration.
-    </p>
-  </div>
-</section>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Pt. Rajendra Kulkarni</div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<section class="content-section">
-  <div class="content-box">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="gurus.html">Gurus</a></li>
+        <li><a href="style.html" aria-current="page" class="active-link">Style</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="discography.html">Discography</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-    <h2>A Personal Musical Language</h2>
-    <p>
-      Pt. Rajendra Kulkarni’s musical style is the result of independent thinking,
-      long-term contemplation, and sustained practice on the Bansuri.
-      Rather than merely following an established school, he has evolved
-      a personal musical language that remains firmly rooted in tradition
-      while expressing a distinct artistic individuality.
-    </p>
+        <li class="lang-select">
+          <label for="language-switcher" class="visually-hidden">Select Language</label>
+          <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <h2>Gayaki and Tantakari on the Flute</h2>
-    <p>
-      His approach integrates the expressive flow of Gayaki with the
-      precision and structure associated with Tantakari, adapted naturally
-      to the flute. This synthesis allows melodic phrases to unfold with
-      clarity, balance, and emotional continuity, making his music both
-      intellectually engaging and aesthetically satisfying.
-    </p>
+  <main id="main-content">
+    
+    <section class="page-header">
+      <div class="header-content">
+        <div data-lang="en">
+          <h1 class="gold-text">Musical Style</h1>
+          <p class="subtitle">A self-developed flute tradition shaped by thought, discipline, and exploration.</p>
+        </div>
+        <div data-lang="mr">
+          <h1 class="gold-text mr-font">सांगीतिक शैली</h1>
+          <p class="subtitle mr-font">चिंतन, शिस्त आणि दीर्घकालीन संशोधनातून विकसित झालेली एक स्वयंभू परंपरा.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Clarity, Sweetness, and Depth</h2>
-    <p>
-      A defining feature of his flute playing is tonal purity and restraint.
-      Every phrase is shaped with care, allowing space, silence, and breath
-      to contribute meaningfully to the overall musical experience.
-      His music often conveys a meditative quality, inviting listeners
-      into a deeper state of reflection.
-    </p>
+    <section class="biography-section">
+      <div class="style-container">
+        
+        <article class="style-card">
+          <div data-lang="en">
+            <h2>A Personal Musical Language</h2>
+            <p>
+              Pt. Rajendra Kulkarni’s musical style is the result of independent thinking, long-term contemplation, and sustained practice on the Bansuri. 
+              Rather than merely following an established school, he has evolved a personal musical language that remains firmly rooted in tradition 
+              while expressing a distinct artistic individuality.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <h2 class="mr-font">स्वतंत्र सांगीतिक भाषा</h2>
+            <p class="mr-font">
+              पं. राजेंद्र कुलकर्णी यांची संगीत शैली ही स्वतंत्र विचार, दीर्घकालीन चिंतन आणि बांसुरीवरील अखंड साधनेचा परिपाक आहे. 
+              केवळ एखाद्या विशिष्ट घराण्याचे अनुकरण करण्याऐवजी, त्यांनी परंपरेला घट्ट धरून ठेवत स्वतःची अशी एक वेगळी आणि वैशिष्ट्यपूर्ण सांगीतिक भाषा विकसित केली आहे.
+            </p>
+          </div>
+        </article>
 
-    <h2>Tradition with Individual Insight</h2>
-    <p>
-      While deeply respectful of the Hindustani classical tradition,
-      his style reflects a thoughtful engagement with the art rather
-      than imitation. Years of riyaaz, performance, and reflection
-      have enabled him to develop a voice that is recognisably his own,
-      yet unmistakably classical.
-    </p>
+        <article class="style-card highlight-style">
+          <div data-lang="en">
+            <h2>Gayaki and Tantakari</h2>
+            <p>
+              His approach integrates the expressive flow of <strong>Gayaki</strong> (Vocal Style) with the precision and structure associated with 
+              <strong>Tantakari</strong> (Instrumental Technique), adapted naturally to the flute. This synthesis allows melodic phrases to unfold 
+              with clarity, balance, and emotional continuity.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <h2 class="mr-font">गायकी आणि तंत्रकारीचा संगम</h2>
+            <p class="mr-font">
+              त्यांच्या वादनात <strong>गायकी</strong> अंगाचा प्रवाहीपणा आणि <strong>तंत्रकारी</strong> अंगाची अचूकता यांचा सुंदर मिलाफ दिसून येतो. 
+              बांसुरी या वाद्याला साजेशी अशी ही पद्धत, रागाचा विस्तार अधिक स्पष्ट, समतोल आणि भावपूर्ण बनवते. यामुळे त्यांचे संगीत बौद्धिक आणि 
+              सौंदर्यदृष्ट्या अत्यंत समृद्ध वाटते.
+            </p>
+          </div>
+        </article>
 
-  </div>
-</section>
+        <article class="style-card">
+          <div data-lang="en">
+            <h2>Clarity, Sweetness, and Depth</h2>
+            <p>
+              A defining feature of his flute playing is tonal purity and restraint. Every phrase is shaped with care, allowing space, silence, 
+              and breath to contribute meaningfully to the overall musical experience. His music often conveys a meditative quality, 
+              inviting listeners into a deeper state of reflection.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <h2 class="mr-font">स्पष्टता, माधुर्य आणि खोली</h2>
+            <p class="mr-font">
+              स्वरांचे शुद्धत्व आणि संयम हे त्यांच्या बांसुरी वादनाचे प्रमुख वैशिष्ट्य आहे. प्रत्येक स्वरावली अत्यंत काळजीपूर्वक सजवलेली असते, 
+              जिथे 'विराम' आणि 'श्वास' यांनाही संगीतात तितकेच महत्त्वाचे स्थान आहे. त्यांचे संगीत अनेकदा ध्यानात्मक अनुभूती देते, 
+              जे श्रोत्यांना अंतर्मुख होण्यास प्रवृत्त करते.
+            </p>
+          </div>
+        </article>
 
-<footer>
-  <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
-  <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
-</footer>
+        <article class="style-card">
+          <div data-lang="en">
+            <h2>Tradition with Insight</h2>
+            <p>
+              While deeply respectful of the Hindustani classical tradition, his style reflects a thoughtful engagement with the art rather than imitation. 
+              Years of riyaaz, performance, and reflection have enabled him to develop a voice that is recognisably his own, yet unmistakably classical.
+            </p>
+          </div>
+          <div data-lang="mr">
+            <h2 class="mr-font">परंपरा आणि नवोन्मेष</h2>
+            <p class="mr-font">
+              हिंदुस्थानी शास्त्रीय परंपरेचा सखोल आदर करतानाच, त्यांची शैली अंधानुकरणाऐवजी विचारपूर्वक कलेची जोपासना करते. 
+              वर्षानुवर्षांचा रियाज आणि चिंतन यातून त्यांनी असा 'सूर' गवसला आहे जो त्यांचा स्वतःचा आहे, तरीही तो अस्सल शास्त्रीय आहे.
+            </p>
+          </div>
+        </article>
 
-<script src="language.js"></script>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
+      <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="language.js"></script>
 
 </body>
 </html>

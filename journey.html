@@ -2,107 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Musical Journey | Pt. Rajendra Kulkarni</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musical Journey | Pt. Rajendra Kulkarni</title>
+  
+  <meta name="theme-color" content="#1a1f3c">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Mukta:wght@400;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">Pt. Rajendra Kulkarni</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="gurus.html">Gurus</a></li>
-      <li><a href="style.html">Musical Style</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="discography.html">Discography</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Musical Journey</h1>
-    <p>
-      From a culturally rich childhood to a lifetime devoted to the Bansuri —
-      a journey shaped by discipline, learning, and unwavering commitment.
-    </p>
-  </div>
-</section>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Pt. Rajendra Kulkarni</div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<section class="content-section">
-  <div class="content-box">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journey.html" aria-current="page" class="active-link">Journey</a></li>
+        <li><a href="gurus.html">Gurus</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="discography.html">Discography</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-    <h2>Early Life & Cultural Roots</h2>
-    <p>
-      Pt. Rajendra Kulkarni was born in the year 1961 in the culturally vibrant
-      city of Belgaum, a land known for its deep association with Hindustani
-      classical music. He hails from a family deeply rooted in art and culture,
-      where music was not merely practiced, but lived.
-    </p>
+        <li class="lang-select">
+          <label for="language-switcher" class="visually-hidden">Select Language</label>
+          <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <p>
-      His father, Shri Bhagawantarao, also known as Balasaheb Kulkarni – Bedakihalkar,
-      was a respected radio artist and an accomplished flautist and violinist.
-      The family atmosphere was enriched by frequent interactions with musicians
-      and connoisseurs, creating a fertile ground for artistic growth.
-    </p>
+  <main id="main-content">
+    
+    <section class="page-header">
+      <div class="header-content">
+        <div data-lang="en">
+          <h1 class="gold-text">Musical Journey</h1>
+          <p class="subtitle">From a culturally rich childhood to a lifetime devoted to the Bansuri.</p>
+        </div>
+        <div data-lang="mr">
+          <h1 class="gold-text mr-font">सांगीतिक प्रवास</h1>
+          <p class="subtitle mr-font">समृद्ध बालपणापासून ते बांसुरीला समर्पित जीवनापर्यंतचा एक शिस्तबद्ध प्रवास.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Early Inclination Towards the Bansuri</h2>
-    <p>
-      Rajendraji developed a keen interest in the Bansuri at the tender age of six.
-      Surrounded by music at home and inspired by the sounds of classical ragas,
-      his connection with the flute grew naturally and deeply from early childhood.
-    </p>
+    <section class="timeline-section">
+      <div class="timeline-container">
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div data-lang="en">
+              <h2>Early Life & Cultural Roots</h2>
+              <span class="date-badge">1961 - Origins</span>
+              <p>
+                Pt. Rajendra Kulkarni was born in 1961 in the culturally vibrant city of Belgaum. 
+                He hails from a family deeply rooted in art, where music was lived, not just practiced.
+                His father, Shri Bhagawantarao (Balasaheb Kulkarni – Bedakihalkar), was a respected radio artist 
+                and accomplished flautist and violinist, creating a fertile ground for artistic growth.
+              </p>
+            </div>
+            <div data-lang="mr">
+              <h2 class="mr-font">प्रारंभिक जीवन आणि सांस्कृतिक वारसा</h2>
+              <span class="date-badge mr-font">१९६१ - उगम</span>
+              <p class="mr-font">
+                पं. राजेंद्र कुलकर्णी यांचा जन्म १९६१ मध्ये बेळगाव या सांस्कृतिकदृष्ट्या समृद्ध शहरात झाला. 
+                त्यांचे वडील, श्री भगवंतराव (बाळासाहेब कुलकर्णी - बेडकीहाळकर), हे आकाशवाणीचे मान्यताप्राप्त कलाकार 
+                आणि उत्कृष्ट बांसुरी व व्हायोलिन वादक होते. घरातच संगीताचे संस्कार मिळाल्याने त्यांच्या कलात्मक जडणघडणीचा पाया पक्का झाला.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <h2>Academic Excellence & Life Choices</h2>
-    <p>
-      Alongside his musical pursuits, he excelled academically, securing an
-      impressive 90% in his twelfth standard examinations. He initially pursued
-      engineering studies after gaining admission; however, a deep realization
-      of his true calling led him to make a bold and conscious decision.
-    </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div data-lang="en">
+              <h2>First Notes</h2>
+              <span class="date-badge">Age 6</span>
+              <p>
+                Rajendraji developed a keen interest in the Bansuri at the tender age of six. 
+                Surrounded by music at home and inspired by the sounds of classical ragas, 
+                his connection with the flute grew naturally and deeply from early childhood.
+              </p>
+            </div>
+            <div data-lang="mr">
+              <h2 class="mr-font">बांसुरीची पहिली साद</h2>
+              <span class="date-badge mr-font">वयाच्या ६ व्या वर्षी</span>
+              <p class="mr-font">
+                अवघ्या सहाव्या वर्षी राजेंद्रजींना बांसुरीची ओढ लागली. घरात सतत वावरणाऱ्या सुरांमुळे 
+                आणि शास्त्रीय रागांच्या संस्कारांमुळे बांसुरीशी त्यांचे नाते बालपणीच दृढ झाले.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <p>
-      Choosing music over engineering, he opted for a Bachelor of Science degree,
-      where he stood second in the college and was honoured as the
-      “Best Student of the Year.” This phase marked a defining moment where
-      passion and purpose aligned.
-    </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div data-lang="en">
+              <h2>The Defining Choice</h2>
+              <span class="date-badge">Education vs Passion</span>
+              <p>
+                He excelled academically, securing 90% in his 12th standard exams. Although he initially 
+                secured admission for Engineering, he realized his true calling was elsewhere. 
+                In a bold move, he chose a Bachelor of Science (B.Sc) to dedicate more time to music. 
+                He stood 2nd in college and was honoured as "Best Student of the Year."
+              </p>
+            </div>
+            <div data-lang="mr">
+              <h2 class="mr-font">जीवनाला कलाटणी देणारा निर्णय</h2>
+              <span class="date-badge mr-font">शिक्षण आणि ध्येय</span>
+              <p class="mr-font">
+                १२ वीच्या परीक्षेत ९०% गुण मिळवूनही त्यांनी इंजिनिअरिंगचा मार्ग नाकारला. 
+                संगीतासाठी पुरेसा वेळ देता यावा म्हणून त्यांनी B.Sc ला प्रवेश घेतला आणि त्यातही महाविद्यालयात 
+                दुसरा क्रमांक पटकावत 'Best Student of the Year' चा बहुमान मिळवला.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <h2>Professional & Family Life</h2>
-    <p>
-      In 1988, he joined the State Bank of India, balancing a committed professional
-      career alongside his continued dedication to classical music. This balance
-      reflects discipline, perseverance, and a deep sense of responsibility.
-    </p>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div data-lang="en">
+              <h2>Balance & Responsibility</h2>
+              <span class="date-badge">1988 Onwards</span>
+              <p>
+                In 1988, he joined the State Bank of India, balancing a professional career with his musical sadhana. 
+                He married Manjiri in 1989, and they have two daughters, Madhuwanti and Shalmali. 
+                The family continues the artistic legacy with strong inclinations towards performing arts.
+              </p>
+            </div>
+            <div data-lang="mr">
+              <h2 class="mr-font">समतोल आणि जबाबदारी</h2>
+              <span class="date-badge mr-font">१९८८ पासून पुढे</span>
+              <p class="mr-font">
+                १९८८ मध्ये त्यांनी स्टेट बँक ऑफ इंडियामध्ये नोकरी स्वीकारली आणि नोकरी सांभाळून आपली संगीत साधना अविरत चालू ठेवली. 
+                १९८९ मध्ये त्यांचा विवाह झाला. त्यांच्या पत्नी मंजिरी आणि मुली मधुवंती व शालमली असा त्यांचा परिवार असून, 
+                घरात कलेचा वारसा आजही जपला जात आहे.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <p>
-      He married Manjiri in 1989, and together they have two daughters,
-      Madhuwanti and Shalmali. The family continues the artistic legacy,
-      with strong inclinations towards performing arts.
-    </p>
+      </div>
+    </section>
 
-  </div>
-</section>
+  </main>
 
-<footer>
-  <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
-  <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
-</footer>
+  <footer>
+    <div class="footer-content">
+      <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
+      <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
+    </div>
+  </footer>
 
-<script src="language.js"></script>
+  <script src="language.js"></script>
 
 </body>
 </html>

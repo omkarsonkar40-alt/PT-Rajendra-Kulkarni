@@ -2,85 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Discography | Pt. Rajendra Kulkarni</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discography | Pt. Rajendra Kulkarni</title>
+  
+  <meta name="theme-color" content="#1a1f3c">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Mukta:wght@400;700;800&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">Pt. Rajendra Kulkarni</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="gurus.html">Gurus</a></li>
-      <li><a href="style.html">Musical Style</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="discography.html">Discography</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Discography</h1>
-    <p>
-      Selected recordings reflecting a disciplined and
-      tradition-rooted journey on the Bansuri.
-    </p>
-  </div>
-</section>
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Pt. Rajendra Kulkarni</div>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<section class="content-section">
-  <div class="content-box">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="gurus.html">Gurus</a></li>
+        <li><a href="style.html">Style</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="discography.html" aria-current="page" class="active-link">Discography</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-    <h2>Published Recordings</h2>
-    <ul>
-      <li>
-        <strong>Audio Cassette</strong> — Released by Vijay Cassette Home, Hubli.
-      </li>
+        <li class="lang-select">
+          <label for="language-switcher" class="visually-hidden">Select Language</label>
+          <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="mr">मराठी</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-      <li>
-        <strong>Audio CD</strong> — Released by Neelam CD Co. Pvt. Ltd., U.S.A.
-      </li>
+  <main id="main-content">
+    
+    <section class="page-header">
+      <div class="header-content">
+        <div data-lang="en">
+          <h1 class="gold-text">Discography</h1>
+          <p class="subtitle">Selected recordings reflecting a disciplined and tradition-rooted journey.</p>
+        </div>
+        <div data-lang="mr">
+          <h1 class="gold-text mr-font">संगीत ध्वनिमुद्रिका</h1>
+          <p class="subtitle mr-font">परंपरा आणि साधनेचा वारसा जपणाऱ्या निवडक ध्वनिमुद्रिका.</p>
+        </div>
+      </div>
+    </section>
 
-      <li>
-        <strong>Cassette and CD</strong> — Released by Fountain Cassette Co., Pune.
-      </li>
+    <section class="biography-section">
+      <div class="discography-grid">
+        
+        <article class="album-card">
+          <div class="album-icon-wrapper">
+            <div class="css-cassette-icon"></div> </div>
+          <div class="album-details">
+            <div data-lang="en">
+              <span class="format-badge">Audio Cassette</span>
+              <h3>Vijay Cassette Home</h3>
+              <p class="album-meta">Hubli Release</p>
+            </div>
+            <div data-lang="mr">
+              <span class="format-badge mr-font">ऑडिओ कॅसेट</span>
+              <h3 class="mr-font">विजय कॅसेट होम</h3>
+              <p class="album-meta mr-font">हुबळी प्रकाशन</p>
+            </div>
+          </div>
+        </article>
 
-      <li>
-        <strong>Audio CD</strong> — Released by Nord Sud CD Co., France,
-        featuring a unique collaborative performance with Flamenco guitarist
-        Pedro Solar.
-      </li>
-    </ul>
+        <article class="album-card">
+          <div class="album-icon-wrapper">
+            <div class="css-cd-icon"></div> </div>
+          <div class="album-details">
+            <div data-lang="en">
+              <span class="format-badge">Audio CD</span>
+              <h3>Neelam CD Co. Pvt. Ltd.</h3>
+              <p class="album-meta">U.S.A. Release</p>
+            </div>
+            <div data-lang="mr">
+              <span class="format-badge mr-font">ऑडिओ सीडी</span>
+              <h3 class="mr-font">नीलम सीडी प्रा. लि.</h3>
+              <p class="album-meta mr-font">अमेरिका (U.S.A.) प्रकाशन</p>
+            </div>
+          </div>
+        </article>
 
-    <h2>Musical Significance</h2>
-    <p>
-      These recordings represent different phases of Pt. Rajendra Kulkarni’s
-      artistic journey and reflect his commitment to maintaining classical
-      integrity while engaging with diverse musical contexts.
-    </p>
+        <article class="album-card">
+          <div class="album-icon-wrapper">
+            <div class="css-cd-icon"></div>
+          </div>
+          <div class="album-details">
+            <div data-lang="en">
+              <span class="format-badge">Cassette & CD</span>
+              <h3>Fountain Cassette Co.</h3>
+              <p class="album-meta">Pune Release</p>
+            </div>
+            <div data-lang="mr">
+              <span class="format-badge mr-font">कॅसेट आणि सीडी</span>
+              <h3 class="mr-font">फाउंटन कॅसेट कंपनी</h3>
+              <p class="album-meta mr-font">पुणे प्रकाशन</p>
+            </div>
+          </div>
+        </article>
 
-  </div>
-</section>
+        <article class="album-card featured-album">
+          <div class="album-icon-wrapper">
+            <div class="css-cd-icon gold-cd"></div>
+          </div>
+          <div class="album-details">
+            <div data-lang="en">
+              <span class="format-badge special-badge">International Release</span>
+              <h3>Nord Sud CD Co., France</h3>
+              <p class="album-desc">
+                A unique collaborative performance with Flamenco guitarist <strong>Pedro Solar</strong>.
+              </p>
+            </div>
+            <div data-lang="mr">
+              <span class="format-badge special-badge mr-font">आंतरराष्ट्रीय प्रकाशन</span>
+              <h3 class="mr-font">नॉर्ड सुद (Nord Sud), फ्रान्स</h3>
+              <p class="album-desc mr-font">
+                फ्लेमेंको गिटार वादक <strong>पेड्रो सोलर</strong> यांच्यासोबतचे वैशिष्ट्यपूर्ण सहवादन (जुगलबंदी).
+              </p>
+            </div>
+          </div>
+        </article>
 
-<footer>
-  <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
-  <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
-</footer>
+      </div>
 
-<script src="language.js"></script>
+      <div class="content-box" style="margin-top: 60px; text-align: center;">
+        <div data-lang="en">
+          <h2>Musical Significance</h2>
+          <p>These recordings represent different phases of Pt. Rajendra Kulkarni’s artistic journey and reflect his commitment to maintaining classical integrity while engaging with diverse musical contexts.</p>
+        </div>
+        <div data-lang="mr">
+          <h2 class="mr-font">सांगीतिक महत्त्व</h2>
+          <p class="mr-font">या ध्वनिमुद्रिका पं. राजेंद्र कुलकर्णी यांच्या सांगीतिक प्रवासातील विविध टप्पे दर्शवतात. शास्त्रीय शुद्धता जपत असतानाच विविध सांगीतिक प्रवाहाशी त्यांनी साधलेला संवाद यात दिसून येतो.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© Pt. Rajendra Kulkarni — All Rights Reserved</p>
+      <p>Email: <a href="mailto:rajendrakul@gmail.com">rajendrakul@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="language.js"></script>
 
 </body>
 </html>
